@@ -1,0 +1,577 @@
+@font-face {
+    font-family: nb;
+    src: url(/fonts/NBInternational.ttf);
+}
+@font-face {
+    font-family: Rejouice Headline;
+    src: url(/fonts/Rejouice-Headline.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nb;
+    font-weight: 200;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #FAF8F3;
+
+}
+
+#main {
+    width: 100%;
+    background-color: #FAF8F3;
+    overflow: hidden;
+}
+
+/* Add other global styles here */
+
+#loader{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    pointer-events: none;
+    z-index: 99;
+}
+
+#page1 {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: translate(-50% -50%);
+}
+
+#cursor {
+    height: 14vh;
+    width: 14vh;
+    border-radius: 50%;
+    background-color: #FF5F38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50% -50%);
+    
+
+}
+
+#cursor h3 {
+    font-weight: 100;
+    font-family: monospace;
+}
+#cursor2 {
+    height: 14vh;
+    width: 14vh;
+    border-radius: 50%;
+    background-color:black;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    /* transform: translate(-50% -50%); */
+}
+
+#cursor2 h3 {
+    font-weight: 100;
+    font-family: monospace;
+}
+
+#page1 video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page1-content {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#page1-content h1 {
+    color: #fff;
+    /* opacity: 0; */
+    /* color: red; */
+
+}
+
+#page1-content #nav {
+    padding: 3vw 3vw;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+
+}
+
+#page1-content #nav h2 {
+    font-weight: 300;
+    font-size: 2vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.char {
+    font-family: Rejouice headline;
+}
+
+#page1-content h1 {
+    margin-top: 35vh;
+    text-align: center;
+    font-family: Rejouice headline;
+    transform: translate(0%, 0%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%); */
+
+    font-size: 25vw;
+    font-weight: 400;
+    /* text-shadow: black 5px 5px; */
+    text-transform: lowercase;
+}
+
+#page2 {
+    /* height: 100vh; */
+    width: 100%;
+    background-color: #FAF8F3;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 4vw;
+}
+
+#page2 p {
+    padding: 2vw 2vw;
+
+}
+#page2 h2{
+    font-size: 3vh;
+    text-align: center;
+}
+
+#page2 h3 {
+
+    font-size: 4.7vw;
+    text-align: center;
+    line-height: 1.3;
+}
+
+#page3-content {
+    background-color: #FAF8F3;
+    height: 50vh;
+    width: 100%;
+    padding-top: 10vh;
+    text-align: center;
+}
+
+#page3-content h1 {
+    font-size: 7vh;
+}
+
+#page3-content h3 {
+    font-size: 2.5vh;
+}
+
+#page3-content h3 span {
+    height: 3vh;
+    padding: 0.5vh 0.5vh;
+    border-radius: 10px;
+    background-color: black;
+    font-size: 10px;
+    color: white;
+}
+
+#page4 {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    overflow-x: hidden;
+}
+
+#page4 #cards {
+    margin-top: 5vh;
+    width: 100%;
+    height: 70vh;
+    /* background-color: red; */
+    /* flex-wrap:wrap; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+
+}
+
+#page4 #cards::after {
+    content: "Transforming visions into brands.";
+    height: auto;
+    /* background-color: pink; */
+    position: absolute;
+    left: 2.4%;
+    top: -2%;
+    font-size: 2.7vh;
+}
+
+#page4 #cards::before {
+    content: " ⤴ See the work";
+    height: auto;
+    /* background-color: pink; */
+    position: absolute;
+    left: 86.5%;
+    top: -2%;
+    font-size: 2.7vh;
+}
+
+.incard {
+    height: 90%;
+    width: 30vw;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.incard video {
+    height: 100%;
+    /* width: 30%; */
+    /* background-color: blue; */
+}
+
+.incard .images {
+    height: 90%;
+    /* width: 3%; */
+    position: absolute;
+    /* cursor: pointer; */
+}
+
+.incard .images:hover {
+    transition: 0.7s;
+    opacity: 0;
+}
+
+#page5 {
+    /* height: 100vh; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    gap: 10vh;
+    /* background-color: red; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#page5-text{
+    padding-left: 5vh;
+}
+
+#page5 h2 {
+    font-size: 5vh;
+    text-align: left;
+    /* margin-left: 10%; */
+}
+
+#page5::after {
+    content: "We operate on a simple philosophy : Quality over quantity.";
+    width: 57.9vh;
+    position: absolute;
+    left: 10%;
+    top: -10%;
+    /* background-color: red; */
+    font-size: 3vh
+}
+
+#page5-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    /* background-color: red; */
+}
+
+#page5-content svg {
+    position: absolute;
+    height: 50vh;
+}
+
+#page5-content h2 {
+    position: absolute;
+    font-size: 4vh;
+    color: white;
+    text-align: center;
+    /* left: 35%; */
+}
+
+#page6 hr{
+    margin-bottom: 5vh;
+}
+
+#page6 {
+    /* height: 100vh; */
+    width: 100%;
+    background-color: #FAF8F3;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    text-align: center;
+    font-size: 4vh;
+    /* align-items: center; */
+}
+
+#page6-content {
+    height: 100vh;
+    width: 100%;
+}
+
+#page6-content h1 {
+    font-size: 8vw;
+    margin-left: 3vw;
+    font-weight: 700;
+}
+
+
+/* 
+#img1{
+    margin-left: 100px;
+} */
+
+
+#ending {
+    height: 100vh;
+    width: 100%;
+    background-color: #0E0E0E;
+    color: white;
+}
+
+#ending #nav {
+    padding-top: 4vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 60vw;
+}
+
+#right {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2vh;
+}
+
+#right h4:hover {
+    display: inline-block;
+    border-bottom: 2px solid white;
+
+}
+
+#left h3:hover {
+    /* display: inline-block; */
+    border-bottom: 2px solid white;
+}
+
+h2:hover {
+    display: inline-block;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.328);
+}
+
+#page5 h2{
+    display: inline-block;
+    border-bottom: none;
+
+}
+
+
+
+
+
+#page1-content #nav h2:hover {
+    /* display: inline-block; */
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+#page5-content  h2:hover {
+    /* display: inline-block; */
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+#left button {
+    margin-top: 3vh;
+    padding: 2vh 3.5vh;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid white;
+}
+
+#left button:hover {
+    border: 2px solid rgba(28, 28, 147, 0.814);
+    
+}
+#ending{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+#ending #content{
+    margin-top:-10vh ;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* overflow: hidden; */
+}
+#ending #content #animend{
+    margin-top: 40vh;
+    display: flex;
+    font-size: 25vw;
+}
+#ending #content #animend .last{
+    font-family: Rejouice Headline;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    #page2 h2{
+        font-size: 1.5vh;
+        text-align: center;
+    }
+    #page2 h3{
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    #page3-content h1 {
+        font-size: 4vh;
+    }
+
+    #page4{
+        height: 160%;
+        padding-top: 2vh;
+    }
+
+    #page4 #cards {
+        /* margin-top: -50vh; */
+        width: 100%;
+        height: 50vh;
+        /* background-color: red; */
+        /* flex-wrap:wrap; */
+    gap:10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    
+    
+    }
+    .incard video {
+        height: 100%;
+        /* width: 30%; */
+        /* background-color: blue; */
+    }
+    .incard {
+        height: 80%;
+        /* width: 10vw; */
+
+        /* background-color: blue; */
+        /* display: none; */
+        /* justify-content: center;
+        align-items: center; */
+        
+    }
+
+    #page4 #cards::after {
+        content: "Transforming visions into brands.";
+        height: auto;
+        /* background-color: pink; */
+        position: absolute;
+        left: 2.4%;
+        top: -12%;
+        font-size: 2.7vh;
+    }
+    
+    #page4 #cards::before {
+        content: " ⤴ See the work";
+        height: auto;
+        /* background-color: pink; */
+        position: absolute;
+        left: 55%;
+        top:290%;
+
+        font-size: 2.7vh;
+    }
+    #page5 h2 {
+        padding-right: 1vh;
+        padding-left: 1vh;
+        font-size: 3.5vh;
+        text-align: right;
+        /* margin-left: 10%; */
+    }
+    
+
+
+    #page5-content svg {
+        position: absolute;
+        height: 40vh;
+    }
+
+    #page6 {
+        /* height: 100vh; */
+        width: 100%;
+        background-color: #FAF8F3;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+        text-align: center;
+        font-size: 2vh;
+        /* align-items: center; */
+    }
+
+    #page6-content {
+        height: 50vh;
+        width: 100%;
+    }
+
+    #page6-content h1 {
+        font-size: 10vw;
+        margin-left: 3vw;
+        font-weight: 700;
+    }
+
+    #ending #nav{
+        gap:20vw;
+        flex-wrap: wrap;
+    }
+    
+    #ending #nav #right{
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+    
+
+    
+
+
+
+    
+    
+    
+}

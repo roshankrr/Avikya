@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        /* background: #eee; */
+        font-family:
+          Helvetica Neue,
+          Helvetica,
+          Arial,
+          sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 50%;
+        margin-top: 5vh;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* background: #fff; */
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        cursor: pointer;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        /* height: 100%; */
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            id="img1"
+            src="https://i.pinimg.com/736x/5a/b6/f5/5ab6f5ba91e2a193b55ca61781e0910c.jpg"
+            alt="Image 1"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            id="img2"
+            src="https://i.pinimg.com/736x/ee/8a/bd/ee8abd3ee4e98d2a63dd490e27af6828.jpg"
+            alt="Image 2"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            id="img3"
+            src="https://i.pinimg.com/736x/ad/c8/46/adc8460bac925350847b370b10c264ce.jpg"
+            alt="Image 3"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            id="img4"
+            src="https://images.prismic.io/rejouice/d3289122-3f25-43f3-b140-11a342a484d7_Mask+group+%2838%29.jpg?auto=compress%2Cformat&fm=webp&width=2048"
+            alt="Image 4"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            id="img5"
+            src="https://images.prismic.io/rejouice/8059f4af-8ba3-4e5f-a14b-ba5ed760963f_Mask+group+%2839%29.jpg?auto=compress%2Cformat&fm=webp&width=2048"
+            alt="Image 5"
+          />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <!-- Add pagination -->
+      <div class="swiper-button-next"></div>
+      <!-- Add navigation button -->
+      <div class="swiper-button-prev"></div>
+      <!-- Add navigation button -->
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
+
+    <!-- Initialize Swiper -->
+    <!-- <script is:inline>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          smooth: true,
+        },
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   clickable: true,
+        // },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+      });
+    </script> -->
+  </body>
+</html>

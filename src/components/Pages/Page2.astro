@@ -1,0 +1,31 @@
+---
+import { gsap } from "gsap";
+---
+
+<div id="page3">
+  <div id="page3-content">
+    <h3 id="anim3">Agency & Venture <span>Models</span>⤵</h3>
+    <h1 id="anim3">Explore Our services</h1>
+    <h1 id="anim3">& engagement models</h1>
+  </div>
+</div>
+
+<script is:inline>
+  function anim3() {
+    gsap.from("#anim3", {
+      y: 150,
+      stagger: 0.25,
+      opacity: 0,
+      // delay:1,
+      // duration:4,
+      scrollTrigger: {
+        trigger: "#page3",
+        start: "top 90%",
+        end: "top center",
+        scrub: 2,
+        // markers:true
+      },
+    });
+  }
+  anim3();
+</script>

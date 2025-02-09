@@ -1,0 +1,36 @@
+---
+import "../styles/animations.css";
+---
+
+<div
+  id="loader"
+  style={"position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999; background: #000; color: #fff; display: flex; justify-content: center; align-items: center;"}
+>
+  <h2>Today's Present..</h2>
+</div>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Prevent scrolling
+
+    gsap.from("#loader h2", {
+      x: 100,
+      opacity: 0,
+      stagger: 2,
+      duration: 5,
+    });
+    gsap.to("#loader h2", {
+      x: -100,
+      opacity: 0,
+    });
+    gsap.to("#loader", {
+      x: -100,
+      delay: 4,
+      opacity: 0,
+      onComplete: () => {
+        // Re-enable scrolling after animation completes
+        document.body.style.overflow = "";
+      },
+    });
+  });
+</script>
